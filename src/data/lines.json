@@ -1,0 +1,126 @@
+[
+  { "lines": [
+    {"text": "practice makes", "type": "title" },
+    {"text": "a piece for you to perform, alone, in the dark"},
+    {"text": "Photosensitivity warning: This piece abruptly changes from dark to light, but these changes are brief and infrequent."}
+  ]},
+  { "lines": [
+    {"text": "We're going to go on a walk together at night, you and I,"},
+    {"text": "but we won't be moving much at all."},
+    {"text": "Make sure you're somewhere dark so you can pretend."},
+    {"text": "I'll wait."}
+  ]},
+  {"lines": [
+    {"text": "Are you somewhere dark?"},
+    {"type": "choices", "choices": [
+      {"text": "Yes", "result": {"text": "Good."}},
+      {"text": "No", "result": {
+        "text": "It will be harder to enjoy this piece if it's bright where you are. Try closing your eyes and pressing this button a few times to make sure you can tell the difference.",
+        "action": "showTestButton"
+      }}
+    ]}
+  ]},
+  {"lines": [
+    {"text": "Are you alone?"},
+    {"type": "choices", "choices": [
+      {"text": "Yes", "result": {"text": "Good."}},
+      {"text": "No", "result": {
+        "text": "That's okay. We're always a little bit alone. Try to pretend it's just the two of us."
+      }}
+    ]}
+  ]},
+  {"lines": [
+    {"text": "Are you standing or sitting still?"},
+    {"type": "choices", "choices": [
+      {"text": "Yes", "result": {"text": "Good."}},
+      {"text": "No", "result": {
+        "text": "Stop somewhere dark before you keep going. Our walk will be more interesting if you aren't. Sitting in a car is fine."
+      }}
+    ]}
+  ]},
+  {"lines": [
+    {"text": "The rules", "type": "title"},
+    {"text": "There are only two rules."},
+    {"text": "1. Don't move."},
+    {"text": "2. Whenever the screen turns white, close your eyes. You're only allowed to have your eyes open when the screen is dark."}
+  ]},
+  {"lines": [
+    {"type": "title", "text": "The rules", "wordWait": 0},
+    {"text": "Let's practice. Close your eyes as soon as you see white."}
+  ]},
+  {
+    "type": "white",
+    "lines": [
+      {"type": "title", "text": "SHUT", "style": "5em", "wordWait": 0}
+    ]
+  },
+  {
+    "type": "black",
+    "lines": [
+      {"text": "Great. Open your eyes again."},
+      {"text": "Could you tell the difference?"},
+      {"type": "choices", "choices": [
+        {"text": "Yes", "result": {"text": "Good."}},
+        {"text": "No", "result": {
+          "text": "Try going somewhere darker and try again. You can press this button to see if you're somewhere dark enough.",
+          "action": "showTestButton"
+        }}
+      ]}
+    ]
+  },
+  {
+    "lines": [
+      {"text": "We're sitting at an outdoor cafe, you and I."},
+      {"text": "The sun already set an hour ago. It's late."},
+      {"text": "We've paid for our food, and we're getting ready to leave."},
+      {"text": "Imagine how you stand up, without moving."}
+    ]
+  },
+  {
+    "type": "white",
+    "lines": [
+      {"type": "title", "text": "STAND", "style": "5em"}
+    ]
+  },
+  {
+    "type": "black",
+    "lines": [
+      {"text": "Hm. Let's try again. Think smaller."},
+      {"text": "Imagine your calves flexing as you push against the ground,"},
+      {"text": "tendons stretching away from your bones"},
+      {"text": "as the machine of your body rises."}
+    ]
+  },
+  {
+    "lines": [
+      {"text": "Plant your hands into the table and push down as you"}
+    ]
+  },
+  {
+    "type": "white",
+    "lines": [
+      {"type": "title", "text": "STAND", "style": "5em"}
+    ]
+  },
+  {
+    "type": "black",
+    "lines": [
+      {"text": "You could still do better."},
+      {"text": "What part of your body is leading you away from the table?"},
+      {"text": "Your foot? Your knee? Your hip?"}
+    ]
+  },
+  {
+    "type": "black",
+    "lines": [
+      {"text": "Try that first step away, again and again,"},
+      {"text": "leading with a different part every time as you"}
+    ]
+  },
+  {
+    "type": "white",
+    "lines": [
+      {"type": "title", "text": "STAND", "style": "5em"}
+    ]
+  }
+]
