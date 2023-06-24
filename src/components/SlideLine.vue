@@ -1,11 +1,21 @@
 <template>
     <template v-for="(word, index) in sentence" :key="index">
-      <span v-show="index < wordIndex" class="word">{{ word }}&nbsp;</span>
+      <span 
+        class="word" 
+        :class="{
+          'word-visible': index < listIndex,
+          'word-auto': props.wordWait == 0
+        }"
+      >
+          {{ word }}&nbsp;
+      </span>
     </template>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue';
+import { computed } from 'vue';
+import { useFadeInList } from '../composables/fadeInList.js';
+
 const props = defineProps({
   id: {
     type: String,
@@ -38,56 +48,18 @@ const props = defineProps({
 });
 const emits = defineEmits(["complete"]);
 
-const wordIndex = ref(-1);
+// const wordIndex = ref(-1);
 const sentence = computed(() => {
   return props.text.split(" ");
 });
-const isFinished = computed(() => {
-  return wordIndex.value - 1 >= sentence.value.length;
+
+const { listIndex } = useFadeInList(sentence, props, () => { 
+  emits("complete"); 
+  console.log("done with postwait?");
 });
 
-onMounted(() => {
-  console.log("mounted", props.text);
-  init();
-});
+console.log(listIndex, listIndex.value);
 
-watch(() => props.id, (newV) => {
-  console.log(newV);
-  if (newV) {
-    wordIndex.value = 0;
-    init();
-  }
-});
-
-const init = () => {
-  setTimeout(() => {
-    // if (props.wordWait == 0) {
-    //   wordIndex.value = sentence.value.length - 1;
-
-    //   setTimeout(() => {
-    //     emits("complete");
-    //   }, props.postWait);
-    // } else {
-      startInterval();
-    // }
-  }, props.preWait);
-}
-
-const startInterval = () => {
-  const interval = setInterval(() => {
-    if (isFinished.value) {
-      clearInterval(interval);
-
-      setTimeout(() => {
-        emits("complete");
-      }, props.postWait);
-    } 
-    
-    else {
-      wordIndex.value++;
-    }
-  }, props.wordWait);
-}
 </script>
 
 <style>
@@ -96,5 +68,16 @@ const startInterval = () => {
 }
 .word {
   display: inline-block;
+  opacity: 0;
+}
+
+.word-visible {
+  opacity: 1;
+  transition: 0.3s opacity;
+}
+
+.word-auto {
+  opacity: 1;
+  transition: none;
 }
 </style>

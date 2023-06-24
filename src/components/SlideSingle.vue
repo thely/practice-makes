@@ -4,17 +4,20 @@
       <h1 v-if="line.type == 'title'">
         <SlideLine v-bind="line" @complete="nextLine"/>
       </h1>
-      <p v-if="line.type == 'text'">
+      <p 
+        v-if="line.type == 'text'"
+        class="line-para"
+        :style="`--line-left: ${styles[index]}%`"
+      >
         <SlideLine v-bind="line" @complete="nextLine"/>
-      </p>
+        </p>
       <SlideChoices v-if="line.type == 'choices'" v-bind="line" @complete="nextLine"/>
     </template>
-    <!-- {{ lines }} -->
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, onMounted, reactive } from 'vue';
 import SlideLine from './SlideLine.vue';
 import SlideChoices from './SlideChoices.vue';
 const props = defineProps({
@@ -32,7 +35,11 @@ const props = defineProps({
   },
   postWait: {
     type: Number,
-    default: 1500
+    default: 2000
+  },
+  left: {
+    type: Number,
+    default: 0
   }
 });
 
@@ -42,6 +49,7 @@ const lineIndex = ref(0);
 const lines = computed(() => {
   return props.lines.slice(0, lineIndex.value + 1);
 });
+const styles = reactive([]);
 
 const nextLine = () => {
   lineIndex.value++;
@@ -53,12 +61,23 @@ const nextLine = () => {
   }
 };
 
+onMounted(() => {
+  styleGen();
+});
+
 watch(() => props.lines, (newV) => {
   console.log(newV);
   if (newV) {
+    styleGen();
     lineIndex.value = 0;
   }
 });
+
+const styleGen = () => {
+  props.lines.forEach((_elem, index) => {
+    styles[index] = Math.random() * 40;
+  });
+}
 </script>
 
 <style>
@@ -75,7 +94,11 @@ watch(() => props.lines, (newV) => {
   color: rgb(48, 181, 48);
 }
 
-.slide-single p {
+.slide-single .line-para {
+  --line-width: 60%;
+  --line-left: 0%;
   margin-bottom: 1em;
+  margin-left: var(--line-left);
+  width: var(--line-width);
 }
 </style>

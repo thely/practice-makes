@@ -12,8 +12,8 @@ import { computed, ref } from 'vue';
 import slidesBase from './data/lines.json';
 import SlideSingle from './components/SlideSingle.vue';
 
-const slideIndex = ref(5);
-const autoplay = ref(false);
+const slideIndex = ref(0);
+const autoplay = ref(true);
 
 const slides = computed(() => {
   slidesBase.forEach((slide, i) => {
@@ -28,12 +28,20 @@ const slides = computed(() => {
       // if we're on the last line of a slide,
       // don't make the slide postwait longer
       if (j == slide.lines.length - 1) {
-        line.postWait = 0;
+        if (!("postWait" in line)) {
+          line.postWait = 0;
+        }
 
         // if that last line is a choices,
         // don't make the whole slide wait after the "next" btn
         if (line.type == "choices") {
           slide.postWait = 0;
+        }
+      }
+
+      if (slide.type && slide.type == "white") {
+        if (!("wordWait" in line)) {
+          line.wordWait = 0;
         }
       }
     });
