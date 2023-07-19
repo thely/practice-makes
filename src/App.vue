@@ -3,7 +3,7 @@
     <!-- <template v-for="(slide, index) in slides" :key="index"> -->
     <SlideSingle v-bind="slides[slideIndex]" @complete="nextSlide" />
     <!-- </template> -->
-    <button v-if="!autoplay" @click="nextSlide">Next</button>
+    <button class="nextButton" v-if="!autoplay" @click="nextSlide">Next</button>
   </main>
 </template>
 
@@ -30,9 +30,9 @@ const slides = computed(() => {
       }
     }
 
-    if (slide.lines[0].type && slide.lines[0].type == "title" && !("wordWait" in slide.lines[0])) {
-      slide.lines[0].wordWait = 500;
-    }
+    // if (slide.lines[0].type && slide.lines[0].type == "title" && !("wordWait" in slide.lines[0])) {
+    //   slide.lines[0].wordWait = 500;
+    // }
 
     slide.lines.forEach((line, j) => {
       line.id = `${i}-${j}`;
@@ -80,4 +80,8 @@ const nextSlide = (e) => {
 </script>
 
 <style>
+.nextButton {
+  position: absolute;
+  bottom: 0;
+}
 </style>

@@ -644,7 +644,7 @@
     "lines": [
       {"type": "title", "text": "The stretch"},
       {"text": "We might as well do the impossible, while he's stuck restarting his computer. Let's *really* stretch."},
-      {"text": "Swing your arms over your head. Don't try to move your arms out first to avoid your hips, just let them clip right through.", "postWait": 1000},
+      {"text": "Swing your arms over your head. Don't try to move your arms out first to avoid your hips, just let them clip right through your legs.", "postWait": 1000},
       {"text": "Rest for a moment with your hands in the air. There's no gravity, so this is painless. It feels the same as having them down at your sides.", "postWait": 1300},
       {"text": "Relax here for a"}
     ],
@@ -661,7 +661,7 @@
     "lines": [
       {"text": "here for a moment."},
       {"type": "title", "text": "The stretch", "wordWait": 0},
-      {"text": "Now as you lower your arms back down, swing backwards just as hard as you swung before.", "postWait": 1000},
+      {"text": "Now, with your hands in the air, swing your arms backwards, behind you. Hard.", "postWait": 1000},
       {"text": "You don't have to be careful here, or worry about pulling muscles; you don't have shoulder blades that would get in the way.", "postWait": 800},
       {"text": "The topology of your shoulders spirals a bit as you do this, but it's fine. It goes back to normal every time your hands are back at their sides. Now, go faster", "wordWait": 280}
     ],
@@ -693,7 +693,7 @@
     "lines": [
       {"type": "title", "text": "Reconnect"},
       {"text": "Ah, good! The 3D artist finally got his computer working."},
-      {"text": "And your animation (which was standing up from the table, if you forgot),"},
+      {"text": "And your animation (which was standing up from the table, if you forgot)"},
       {"text": "(and forgetting is something I always seem to practice in dreams)", "wordWait": 280},
       {"text": "is fixed, and he's getting ready to render it."}
     ]
@@ -1069,8 +1069,8 @@
   {
     "lines": [
       {"text": "where you are right now. Think up a nice path through your space. How would you walk that path? Who or what do you need to avoid?", "postWait": 1250},
-      {"text": "Imagine walking as close to the wall as you can. What do your clothes sound like as they brush against everything. What would you knock over?", "postWait": 1250},
-      {"text": "Imagine falling sideways partway through. Backwards. Where do you land? Would you catch yourself? Would you trip", "wordWait": 250}
+      {"text": "Imagine walking as close to the wall as you can. What do your clothes sound like as they brush against everything? What would you knock over?", "postWait": 1250},
+      {"text": "Imagine falling sideways partway through. Backwards. Where do you land? Would you catch yourself? Would you trip", "wordWait": 200}
     ],
     "postWait": 250
   },
