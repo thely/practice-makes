@@ -19,6 +19,21 @@ const slides = computed(() => {
   slidesBase.forEach((slide, i) => {
     slide.id = `${i}`;
 
+    // add some prewait if we're exiting a white slide
+    if (i > 0 && slidesBase[i - 1].type == "white") {
+      if (slide.lines[0].type) {
+        // if we have a title, prewait the first line of text (2nd thing)
+        slide.lines[1].preWait = 500;
+      } else {
+        // if no title, prewait the first line (1st thing)
+        slide.lines[0].preWait = 500;
+      }
+    }
+
+    if (slide.lines[0].type && slide.lines[0].type == "title" && !("wordWait" in slide.lines[0])) {
+      slide.lines[0].wordWait = 500;
+    }
+
     slide.lines.forEach((line, j) => {
       line.id = `${i}-${j}`;
       if (!("type" in line)) {
@@ -39,6 +54,8 @@ const slides = computed(() => {
         }
       }
 
+      // if we're on a white slide, we shouldn't
+      // be waiting for the text to appear
       if (slide.type && slide.type == "white") {
         if (!("wordWait" in line)) {
           line.wordWait = 0;

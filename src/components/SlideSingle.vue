@@ -75,7 +75,7 @@ watch(() => props.lines, (newV) => {
 
 const styleGen = () => {
   props.lines.forEach((_elem, index) => {
-    styles[index] = Math.random() * 40;
+    styles[index] = Math.random() * 20 * (index % 2);
   });
 }
 </script>

@@ -71,12 +71,15 @@ export function useFadeInList(list, props, callback) {
       return 0;
     }
 
-    if (val.match(/[,:)]/)) {
+    if (val.match(/[,)]/)) {
       console.log("middle punc!");
       len += 250;
-    } else if (val.match(/[?!.;]/)) {
+    } else if (val.match(/[:;]/)) {
+      console.log("weird punc!");
+      len += 310;
+    } else if (val.match(/[?!.]/)) {
       console.log("end punc!");
-      len += 400;
+      len += 500;
     }
 
     return len;
