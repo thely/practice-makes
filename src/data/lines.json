@@ -14,10 +14,13 @@
     {"text": "Are you somewhere dark?"},
     {"type": "choices", "choices": [
       {"text": "Yes", "result": {"text": "Good."}},
-      {"text": "No", "result": {
-        "text": "It will be harder to enjoy this piece if it's bright where you are. Try closing your eyes and pressing this button a few times to make sure you can tell the difference.",
+      {
+        "text": "No", 
+        "result": {
+          "text": "It will be harder to enjoy this piece if it's bright where you are. Try closing your eyes and pressing the Test button below a few times to make sure you can tell the difference."
+        },
         "action": "showTestButton"
-      }}
+      }
     ]}
   ]},
   {"lines": [
@@ -45,9 +48,10 @@
   ]},
   {"lines": [
     {"text": "The rules", "type": "title", "wordWait": 0},
-    {"text": "Let's try a few things. Remember: don't move your real body, but instead imagine these actions in as much detail as possible."},
-    {"text": "Swing your arms at your sides. Try and feel the momentum, the way your arms swish against your clothes, the way your whole body twists ever-so-slightly.", "postWait": 3000},
-    {"text": "Now imagine hanging from a metal bar by your hands. Feel the way your palms scrunch against the metal, the pull in your shoulders from holding up your own weight, the tension in your legs from keeping your feet off the ground.", "postWait": 3000}
+    {"text": "Let's try something simple. Remember: don't move your real body, but instead imagine these actions in as much detail as possible."},
+    {"text": "Swing your arms back and forth at your sides, with your arms alternating direction.", "postWait": 3000},
+    {"text": "Keep swinging, but now make both arms go in the same direction.", "postWait": 3000},
+    {"text": "Try and feel the momentum, the way your arms swish against your clothes, the way your whole body twists ever-so-slightly.", "postWait": 3000}
   ]},
   {"lines": [
     {"text": "The rules", "type": "title", "wordWait": 0},
@@ -72,10 +76,13 @@
       {"text": "Could you tell the difference?"},
       {"type": "choices", "choices": [
         {"text": "Yes", "result": {"text": "Good."}},
-        {"text": "No", "result": {
-          "text": "Try going somewhere darker and try again. You can press this button to see if you're somewhere dark enough.",
+        {
+          "text": "No", 
+          "result": {
+            "text": "Try going somewhere darker and try again. You can press this button to see if you're somewhere dark enough."
+          },
           "action": "showTestButton"
-        }}
+        }
       ]}
     ]
   },
@@ -101,8 +108,8 @@
   {
     "lines": [
       {"text": "We're both drinking something, but the drink and its container are up to you: hot, cold, beer, coffee, teacup, stein, etc. Follow your first instinct.", "wordWait": 180, "postWait": 800},
-      {"text": "Reach for your drink, and feel your fingers grasp against the glass. How tightly do you need to tense your muscles to lift it?", "postWait": 800},
-      {"text": "Is it hot, or cold? Can you taste it?", "wordWait": 180}
+      {"text": "Reach for your drink, and feel your fingers grasp against the glass. When you lift it, how tightly do you need to hold it?", "postWait": 800},
+      {"text": "Can you taste it?", "wordWait": 180}
     ]
   },
   {
@@ -116,7 +123,7 @@
     "lines": [
       {"text": "Now put it back down, and hear the lattice tabletop rattle just a little as it lands."},
       {"text": "With one hand resting on the table, tap the glass with your fingernail. What sound does it make?", "postWait": 2000},
-      {"text": "Imagine humming that pitch, feeling your vocal chords vibrating inside your neck, and the sound buzzing against your closed lips.", "postWait": 2700}
+      {"text": "Imagine humming that pitch, feeling your vocal chords vibrating inside your neck, and the sound buzzing against your closed lips.", "postWait": 2000}
     ]
   },
   {
@@ -124,14 +131,14 @@
     "lines": [
       {"type": "title", "text": "TINK", "style": "5em"}
     ],
-    "postWait": 3500
+    "postWait": 4000
   },
   {
     "lines": [
       {"text": "We already paid for our drinks awhile ago, but like I said, it's late, and we should probably think about leaving."},
       {"text": "Imagine every part of standing up."}
     ],
-    "postWait": 3000
+    "postWait": 2000
   },
   {
     "type": "white",
@@ -154,7 +161,7 @@
       {"type": "title", "text": "Your hands"},
       {"text": "Put both hands flat on the table, and pull them towards you loosely.", "postWait": 1000},
       {"text": "Feel your fingertips dip and bounce in and out of the holes in the lattice as they move.", "postWait": 1000},
-      {"text": "Hear the sound they make as they drift, a sort of high-pitched mix of shuffling and tinkling."}
+      {"text": "Hear the sound they make as they drift, a mix of ringing, tapping, and scratching."}
     ]
   },
   {
@@ -168,9 +175,9 @@
     "type": "black",
     "lines": [
       {"type": "title", "text": "Your hands", "wordWait": 0},
-      {"text": "Keep going until your hands get to the edge of the table, so that only your fingers and thumbs are still touching the lattice.", "postWait": 1500},
-      {"text": "Hold here a moment. Can you feel how your shoulders tense to keep your forearms afloat?", "postWait": 1500},
-      {"text": "Next step. Now that your forearms are hovering, no longer supported by the table, let gravity naturally lower your wrists."}
+      {"text": "Keep pulling your hands towards you until they're at edge of the table, so that only your fingers and thumbs are still touching the lattice.", "postWait": 1500},
+      {"text": "Hold here a moment, but don't relax. Can you feel how your shoulders tense to keep your forearms afloat?", "postWait": 2500},
+      {"text": "With your forearms hovering, no longer supported by the table, let gravity naturally lower your wrists."}
     ],
     "postWait": 2000
   },
@@ -197,7 +204,7 @@
     "lines": [
       {"type": "title", "text": "Pushing out"},
       {"text": "Now, with our hands holding the table for support, we should be able to push our chair out, which will give us room to stand."},
-      {"text": "Press away from your torso, palms pushing against the edge of the table.", "postWait": 1200},
+      {"text": "Press away from your torso, palms pushing against the edge of the table.", "postWait": 1600},
       {"text": "Push hard, so you can push your chair out and away from the"}
     ],
     "postWait": 200
@@ -214,7 +221,7 @@
     "lines": [
       {"type": "title", "text": "Pushing out", "wordWait": 0},
       {"text": "table, but not so hard!"},
-      {"text": "The table isn't screwed in to the ground, and both the table and the chairs are sitting on concrete, so the table probably moved instead of the chair.", "postWait": 900},
+      {"text": "The table isn't screwed in to the ground, and both the table and the chairs are sitting on concrete, so the table probably moved instead of the chair.", "postWait": 1200},
       {"text": "You may have just pushed it at me."}
     ]
   },
@@ -246,7 +253,7 @@
       {"type": "title", "text": "Pushing down", "wordWait": 0},
       {"text": "Our hands have to push down into the table to keep steady,"},
       {"text": "and our feet have to press down into the concrete beneath us."},
-      {"text": "Hear the small crunching sound from the friction between your soles and the ground."}
+      {"text": "Slide your feet into position. Hear the sound of friction between your shoes and the ground."}
     ]
   },
   {
@@ -282,7 +289,7 @@
   {
     "lines": [
       {"text": "This sort of thing always seems to happen in my dreams. I keep repeating the same thing over and over again, to see if I can make it perfect."},
-      {"text": "Most of the time it just gets worse every loop, either catastrophically or comically. Or both."},
+      {"text": "Most of the time it just gets worse, either catastrophically or comically. Or both."},
       {"text": "Does this happen to you, too? Or is it just me?"}
     ],
     "postWait": 1500
@@ -329,13 +336,13 @@
     "lines": [
       {"type": "title", "text": "LEAD", "style": "5em"}
     ],
-    "postWait": 4000
+    "postWait": 2000
   },
   {
     "lines": [
       {"text": "Now that we've got the steps, let's put it all together from the beginning."},
-      {"text": "1. Hands on table. Pull them towards you. Stop at the table's edge.", "wordWait": 200, "postWait": 1000},
-      {"text": "2. Hands press into the table, feet press onto the ground. Lift to a half-squat.", "wordWait": 200, "postWait": 1000},
+      {"text": "1. Hands on table. Pull them towards you. Stop at the table's edge. Wrists drop.", "wordWait": 200, "postWait": 1000},
+      {"text": "2. Slide feet back. Hands press into the table, feet press onto the ground. Lift to a half-squat.", "wordWait": 200, "postWait": 1000},
       {"text": "3. Straighten your legs, and step away.", "wordWait": 200, "postWait": 1000},
       {"text": "Keep repeating the motions and imagining the sounds, as well. Find a tempo."}
     ]
@@ -348,22 +355,24 @@
   },
   {
     "lines": [
-      {"text": "Keep repeating that motion as we continue."}
+      {"text": "Think about this standing motion as if you were a sequencer. Each motion, each sound, happens on a step.", "postWait": 1000},
+      {"text": "You could delay a motion by a beat. Or, turn a dial and make the tempo of the whole sequence slow down.", "wordWait": 190, "postWait": 1000},
+      {"text": "Or, add a new motion on an unused beat, one I haven't even thought to include here."}
     ]
   },
   {
     "lines": [
       {"type": "title", "text": "The foley artist"},
-      {"text": "Imagine a foley artist a few meters behind you, someone whose job it is to perform all the sound design in films."},
-      {"text": "Today, they're adding sound effects on top of your repeated standings.", "postWait": 900},
+      {"text": "Imagine a foley artist a few meters behind you, someone whose job it is to perform all the sound design in films.", "postWait": 1000},
+      {"text": "Today, they're adding sound effects on top of your sequence.", "postWait": 900},
       {"text": "They're starting with your shoes. They sprinkle some dirt on the ground for grit, put their hands in a pair of shoes like yours, and step or scrape with you."}
     ]
   },
   {
     "lines": [
       {"type": "title", "text": "The foley artist", "wordWait": 0},
-      {"text": "Drag, press, straighten, step away. Keep repeating the motions of standing.", "postWait": 1200},
-      {"text": "As you continue the motions, staying aware of your movement, hear the sound of your shoes coming from the foley artist", "postWait": 100}
+      {"text": "Pull, press, straighten, step away. Keep repeating the sequence.", "postWait": 1200},
+      {"text": "As you continue the motions, staying aware of your movement, hear the sound of your shoes coming from the foley artist", "postWait": 100, "wordWait": 180}
     ],
     "postWait": 0
   },
@@ -372,14 +381,14 @@
     "lines": [
       {"type": "title", "text": "SCUFF", "style": "5em"}
     ],
-    "postWait": 800
+    "postWait": 1000
   },
   {
     "lines": [
       {"text": "behind you."},
       {"type": "title", "text": "The film crew"},
       {"text": "You can also see several members of a film crew near you (cameraman, boom operators, the director).", "postWait": 1200},
-      {"text": "It may be hard to tell from where you're sitting (or standing, depending on where you are in your loop), but the camera is pointed at you.", "postWait": 800}
+      {"text": "It may be hard to tell from where you're sitting (or standing, depending on where you are in your loop), but the camera is pointed at you.", "postWait": 1500}
     ]
   },
   {
@@ -395,14 +404,14 @@
     "lines": [
       {"type": "title", "text": "ACTION", "style": "5em"}
     ],
-    "postWait": 500
+    "postWait": 800
   },
   {
     "lines": [
       {"text": "the camera's perspective."},
       {"type": "title", "text": "The movie"},
-      {"text": "I suppose you must be in a movie. Does that change anything for you?"},
-      {"text": "Do you loom over the table a bit as you begin to rise? Do you flip the table towards me, because you need to make a break for it? Why is the film so focused on how you leave this conversation?", "postWait": 1200},
+      {"text": "I suppose you must be in a movie. Does that change anything for you?", "postWait": 1500},
+      {"text": "Do you loom over the table a bit as you begin to rise? Do you flip the table towards me, because you need to make a break for it? Why is the film so focused on how you leave this conversation?", "postWait": 1800},
       {"text": "The camera pans as you keep standing. Why is it doing that? Where", "postWait": 200}
     ],
     "postWait": 0
@@ -431,9 +440,9 @@
   },
   {
     "lines": [
-      {"text": "different than it started.", "wordWait": 200},
-      {"text": "Have you ever tried to rehearse an argument? Of course you have.", "wordWait": 300},
-      {"text": "You want to control how time passed. You want to be right. But I always find myself", "wordWait": 500}
+      {"text": "different than it started.", "wordWait": 180},
+      {"text": "Have you ever tried to rehearse an argument? Of course you have.", "wordWait": 220},
+      {"text": "You want to control how time passed. You want to be right. But I always find myself", "wordWait": 250}
     ],
     "postWait": 0
   },
@@ -455,14 +464,14 @@
   {
     "lines": [
       {"type": "title", "text": "The soundstage"},
-      {"text": "You're in a soundstage inside an enormous warehouse. Every part of your set has been painted green so they can chromakey it out: the walls, the floors, even the table and chairs.", "postWait": 800},
+      {"text": "You're in a soundstage inside an enormous warehouse. Every part of your set has been painted green so they can chromakey it out: the walls, the floors, even the table and chairs.", "postWait": 1500},
       {"text": "Violently green, even. The table and chairs are clearly plywood, sanded down just enough to be safe."}
     ]
   },
   {
     "lines": [
       {"type": "title", "text": "The soundstage", "wordWait": 0},
-      {"text": "You're wearing a stretchy spandex motion capture suit covered in little reflective spheres. Touch one of the spheres: small, hard plastic, attached with velcro."},
+      {"text": "You're wearing a stretchy spandex motion capture suit covered in little reflective spheres. Touch one of the spheres: small, hard plastic, attached with velcro.", "postWait": 1000},
       {"text": "Pull it off."}
     ]
   },
@@ -478,16 +487,16 @@
       {"type": "title", "text": "The soundstage", "wordWait": 0},
       {"text": "You probably shouldn't have done that! Someone whose name you don't remember probably spent a long time placing them."},
       {"text": "But don't worry, this is your mind. No one will yell at you unless you want them to."},
-      {"text": "Unless that's something you're trying to practice.", "wordWait": 300},
+      {"text": "Unless that's something you're trying to practice.", "wordWait": 250},
       {"text": "Or at least, they shouldn't.", "postWait": 700},
       {"text": "Let's get back to standing."}
     ]
   },
   {
     "lines": [
-      {"text": "Now that things have changed, let's slow down the speed of your stand as you repeat it. Figure out how the sounds change with plywood furniture and a quiet soundstage.", "wordWait": 280},
+      {"text": "Now that things have changed, let's slow down the speed of sequence. How do the sounds change with plywood furniture and a quiet soundstage?", "wordWait": 250},
       {"text": "There are no lattice gaps for your fingers, no concrete or metal to scrape against. Everything is hollow.", "wordWait": 280},
-      {"text": "Look behind you at the foley artist. What are they doing differently for your shoes? Are they recreating the sound of your original table, or", "wordWait": 280}
+      {"text": "Look behind you at the foley artist. What are they doing differently for your shoes? Are they recreating the sound of your original table, or", "wordWait": 250}
     ],
     "postWait": 0
   },
@@ -517,14 +526,14 @@
     "lines": [
       {"text": "think very much of you at all.", "wordWait": 350},
       {"type": "title", "text": "The director's view"},
-      {"text": "Try to see through the director's eyes now, while you continue repeating."},
-      {"text": "They're watching the data version of you, on a tiny little screen, based on all your reflective tracker spheres."}
+      {"text": "Try to see through the director's eyes now, while you continue repeating.", "postWait": 1400},
+      {"text": "They're watching the data version of you, on a tiny little screen, based on all your reflective tracker spheres.", "postWait": 1500}
     ]
   },
   {
     "lines": [
       {"type": "title", "text": "The director's view", "wordWait": 0},
-      {"text": "You've been reduced to dozens or perhaps hundreds of disconnected dots, no surface blocking your back from your front.", "postWait": 900},
+      {"text": "You've been reduced to dozens or perhaps hundreds of disconnected dots, no surface blocking your back from your front.", "postWait": 1500},
       {"text": "The table is gone, the chairs are gone; it's just you, standing on repeat, everything missing but this data visualization.", "wordWait": 250},
       {"text": "Do you look like a stick figure, on that tiny screen? Or can you see how the polygons", "wordWait": 220}
     ],
@@ -541,7 +550,7 @@
     "lines": [
       {"text": "connect to almost become skin?"},
       {"type": "title", "text": "Your body, no body"},
-      {"text": "Can you feel all those lines beneath your flesh, like stick-straight veins?"},
+      {"text": "Can you feel all those dots beneath your flesh, like little connection points for stick-straight veins?"},
       {"text": "As they look at your generated, data-self, are they", "wordWait": 250}
     ],
     "postWait": 300
@@ -557,7 +566,7 @@
       {"text": "disappointed by what they see? Can you stand up better, somehow?", "wordWait": 300, "postWait": 800},
       {"type": "title", "text": "Your movement"},
       {"text": "More dynamically? More like an actual human would stand? Can you make the director proud of your bones, your veins?", "wordWait": 100},
-      {"text": "Or is it impossible? In the dreams, \"better\" is often", "wordWait": 300}
+      {"text": "Or is it impossible? In the dreams, \"better\" is often", "wordWait": 250}
     ],
     "postWait": 300
   },
@@ -566,14 +575,14 @@
     "lines": [
       {"type": "title", "text": "IMPOSSIBLE", "style": "5em"}
     ],
-    "postWait": 500
+    "postWait": 800
   },
   {
     "lines": [
       {"text": "impossible."},
       {"type": "title", "text": "The 3D artist"},
-      {"text": "Moving on. There's a 3D artist somewhere, hundreds of miles away from you, weeks in the future, making sense of all the data in those bones of yours.", "postWait": 800},
-      {"text": "You've got topology now, optimized polygons representing you with the minimum number of shapes."},
+      {"text": "Moving on. There's a 3D artist somewhere, hundreds of miles away from you, weeks in the future, making sense of all the data in those bones of yours.", "postWait": 1500},
+      {"text": "You've got topology now, optimized polygons representing you with the minimum number of shapes.", "postWait": 800},
       {"text": "Feel them: large, long rectangles running along your arms and legs; small, tight squares", "wordWait": 250, "postWait": 200}
     ],
     "postWait": 0
@@ -589,7 +598,7 @@
     "lines": [
       {"text": "outlining the plateaus on your face. You're weightless, now. Beyond weightless."},
       {"type": "title", "text": "Your body, no body"},
-      {"text": "You have no insides anymore: no organs, no blood, no bones. Within the paper boundary of your 3D mesh, it's all empty.", "postWait": 800},
+      {"text": "You have no insides anymore: no organs, no blood, no bones. Within the paper boundary of your 3D mesh, it's all empty.", "postWait": 800, "wordWait": 200},
       {"text": "Do you remember what it felt like to stand up from the table? How does it feel now, with no flesh to lift? When your hands and feet briefly clip", "wordWait": 280, "postWait": 300}
     ],
     "postWait": 0
@@ -606,7 +615,7 @@
       {"text": "clip through the table and the floor? Passing through what you thought was solid matter?", "postWait": 1000},
       {"type": "title", "text": "Dislocate", "postWait": 700},
       {"text": "Oh wait, how strange. Your vertices have come unaligned, somehow."},
-      {"text": "All those polygons that generated off of your little reflective motion capture spheres are now drifting in every direction,", "wordWait": 300},
+      {"text": "All those polygons that generated off of your little reflective motion capture spheres are now drifting in every direction,", "wordWait": 280},
       {"text": "taking their vertices along for the ride."}
     ]
   },
@@ -645,7 +654,7 @@
       {"type": "title", "text": "The stretch"},
       {"text": "We might as well do the impossible, while he's stuck restarting his computer. Let's *really* stretch."},
       {"text": "Swing your arms over your head. Don't try to move your arms out first to avoid your hips, just let them clip right through your legs.", "postWait": 1000},
-      {"text": "Rest for a moment with your hands in the air. There's no gravity, so this is painless. It feels the same as having them down at your sides.", "postWait": 1300},
+      {"text": "Keep your hands in the air. There's no gravity, so this is painless. It feels the same as having them down at your sides.", "postWait": 1300},
       {"text": "Relax here for a"}
     ],
     "postWait": 300
@@ -661,9 +670,9 @@
     "lines": [
       {"text": "here for a moment."},
       {"type": "title", "text": "The stretch", "wordWait": 0},
-      {"text": "Now, with your hands in the air, swing your arms backwards, behind you. Hard.", "postWait": 1000},
+      {"text": "Now, swing your arms backwards, behind you. Hard.", "postWait": 1000},
       {"text": "You don't have to be careful here, or worry about pulling muscles; you don't have shoulder blades that would get in the way.", "postWait": 800},
-      {"text": "The topology of your shoulders spirals a bit as you do this, but it's fine. It goes back to normal every time your hands are back at their sides. Now, go faster", "wordWait": 280}
+      {"text": "The topology of your shoulders spirals a bit as you do this, but it's fine. It pops back to normal every time your hands are back at their sides. Now, go faster", "wordWait": 280}
     ],
     "postWait": 280
   },
@@ -676,9 +685,9 @@
   },
   {
     "lines": [
-      {"text": "faster, stretch your arms out farther and farther, until they're as long as you are tall."},
+      {"text": "faster, stretch your arms out farther and farther, until they're as long as you are tall. How fast can you go?"},
       {"type": "title", "text": "The foley artist"},
-      {"text": "What does the foley artist make of all this, by the way? They never left, and they're still behind you. What sounds do they give your spinning bones, your whirling arms?"},
+      {"text": "What does the foley artist make of all this, by the way? They never left, and they're still behind you. What sounds are they adding here?"},
       {"text": "Do you sound like flesh and leather now, or steel? Smooth, or noisy?"}
     ]
   },
@@ -693,9 +702,9 @@
     "lines": [
       {"type": "title", "text": "Reconnect"},
       {"text": "Ah, good! The 3D artist finally got his computer working."},
-      {"text": "And your animation (which was standing up from the table, if you forgot)"},
+      {"text": "And your animation (which was standing up from the table, not windmilling your arms, in case you forgot)"},
       {"text": "(and forgetting is something I always seem to practice in dreams)", "wordWait": 280},
-      {"text": "is fixed, and he's getting ready to render it."}
+      {"text": "is fixed, so he's getting ready to render it."}
     ]
   },
   {
@@ -708,7 +717,7 @@
     "lines": [
       {"type": "title", "text": "The render"},
       {"text": "He presses the render button, and the process begins."},
-      {"text": "For every frame, the renderer bounces fake light particles on every simulated wall, table, arm, and chair in the fake scene,", "postWait": 800},
+      {"text": "For every frame, the renderer bounces fake light particles on every simulated wall, table, arm, and chair in the fake scene,", "postWait": 1000},
       {"text": "focusing mainly on the space in front of the scene's fake camera."}
     ]
   },
@@ -717,7 +726,7 @@
       {"type": "title", "text": "The render", "wordWait": 0},
       {"text": "It takes about five seconds for this to happen. Can you feel the lights bounce around you, like snowflakes, or needles?", "postWait": 800},
       {"text": "What do they sound like? Silent like snow, or huge like a storm?"},
-      {"text": "Does it hurt to hold still for all these individual frames, these fractions of a second, for so long? Feel every slice of your", "wordWait": 280, "postWait": 250}
+      {"text": "Does it hurt to hold single beats in the sequence like this? Do the sounds stretch out? Are your muscles sore? Feel every slice of your", "wordWait": 280, "postWait": 250}
     ],
     "postWait": 0
   },
@@ -811,7 +820,7 @@
   {
     "type": "white",
     "lines": [
-      {"type": "title", "text": "SLICE", "style": "5em", "preWait": 0, "postWait": 50}
+      {"type": "title", "text": "SLICE", "style": "5em", "preWait": 0, "postWait": 150}
     ]
   },
   {
@@ -822,22 +831,22 @@
   {
     "type": "white",
     "lines": [
-      {"type": "title", "text": "SLICE", "style": "5em", "preWait": 0, "postWait": 50}
+      {"type": "title", "text": "SLICE", "style": "5em", "preWait": 0, "postWait": 150}
     ]
   },
   {
     "lines": [
       {"type": "title", "text": "The animator", "wordWait": 0},
-      {"text": "So the animator is using your render as a reference, while redoing some elements."},
-      {"text": "Each frame is now getting sketched individually, on sheets of semi-transparent paper."},
-      {"text": "Time is different here: your frames are drawn one at a time, but are built up as a group, flipped between to adjust for changes.", "wordWait": 250}
+      {"text": "The animator is using your render as a reference while redrawing the scene.", "postWait": 1400},
+      {"text": "Each frame is now getting sketched individually, pencilled onto sheets of semi-transparent paper.", "postWait": 1400},
+      {"text": "Time is different here: while your frames are drawn one at a time, they're built up as a group, flipped between to adjust for changes.", "wordWait": 250}
     ]
   },
   {
     "lines": [
       {"type": "title", "text": "The paper"},
       {"text": "The paper is thin, but makes a broad, flat sort of crinkling sound."},
-      {"text": "Hear the foley artist, a meter behind you, trying to make a sound that's somewhere between paper flipping and time passing.", "postWait": 800},
+      {"text": "Hear the foley artist, a meter behind you, trying to morph the shoe sounds from before into pencils on paper. It sounds a bit like time passing", "postWait": 1400},
       {"text": "Does he think this is supposed to be the sound of your skin? Do you", "wordWait": 200}
     ],
     "postWait": 200
@@ -869,9 +878,9 @@
   {
     "lines": [
       {"type": "title", "text": "The smears"},
-      {"text": "Now she draws your inbetweens: all the contorted drawings between important moments that create a sense of motion and speed.", "postWait": 800},
+      {"text": "Now she draws your inbetweens: all the contorted drawings between that create a sense of motion and speed.", "postWait": 800},
       {"text": "Watch: as your hands first reach the table, they smear in a downwards arc, as if your skin forgot about its bones until they catch up.", "postWait": 800},
-      {"text": "Can you feel your skin turning to a paste, just for a moment?"}
+      {"text": "Can you feel your skin turning to a paste, just for a moment? Like an oil pastel, or a stick of butter?"}
     ]
   },
   {
@@ -894,9 +903,9 @@
   {
     "lines": [
       {"type": "title", "text": "The colors"},
-      {"text": "Your colors are painted on the other side of the sheet, behind and beneath the outlines,"},
-      {"text": "lathering you in skin and fabric where once there were only empty holes.", "postWait": 800},
-      {"text": "The background (table, chairs, street, cafe) is shuffled in behind you, on a separate sheet."},
+      {"text": "Your colors are painted on the other side of the sheet, behind and beneath the outlines,", "postWait": 1400},
+      {"text": "lathering you in skin and fabric where once there were only empty holes.", "postWait": 1400},
+      {"text": "The background (table, chairs, street, cafe) is shuffled in behind you, on a separate sheet.", "postWait": 1400},
       {"text": "You and the table followed completely separate paths."}
     ]
   },
@@ -927,7 +936,7 @@
     "lines": [
       {"type": "title", "text": "STAND", "style": "5em"}
     ],
-    "postWait": 500
+    "postWait": 3000
   },
   {
     "lines": [
@@ -946,10 +955,26 @@
   },
   {
     "lines": [
+      {"type": "title", "text": "The walk", "wordWait": 0},
+      {"text": "I'll help you build them. Hear the drone of nighttime bugs, coming from everywhere.", "postWait": 1500},
+      {"text": "Your footsteps on the asphalt, occasionally stepping on small rocks or crunchy dead leaves.", "postWait": 1500},
+      {"text": "A car on the other side of the treeline drives past, whooshing like waves.", "postWait": 1500},
+      {"text": "A second car passes. There's a dog barking from a house next to the path."}
+    ]
+  },
+  {
+    "lines": [
       {"text": "This is how the dream works."},
       {"text": "We wake up briefly, then fall asleep again. But we just interpret it as a scene change,"},
       {"text": "and we manage to connect the dots even when we shouldn't."}
     ]
+  },
+  {
+    "type": "white",
+    "lines": [
+      {"type": "title", "text": "SLICE", "style": "5em"}
+    ],
+    "postWait": 150
   },
   {
     "lines": [
@@ -982,9 +1007,10 @@
       {"type": "title", "text": "The walk", "wordWait": 0},
       {"text": "Does it seem empty now, after all the ways you've seen yourself?"},
       {"text": "I'm not surprised. Let's make it bigger."},
-      {"text": "Imagine all the sounds you're hearing (bugs, footsteps, wind, leaves, dogs barking, faraway cars) getting louder.", "postWait": 800},
+      {"text": "Imagine all the sounds you're hearing getting louder.", "postWait": 1500},
       {"text": "Loud enough that it almost hurts."}
-    ]
+    ],
+    "postWait": 1500
   },
   {
     "type": "white",
@@ -1026,7 +1052,7 @@
     "lines": [
       {"text": "and you're still standing, and standing, and standing, over and over again, in every medium, accompanied by every sound, the noise of it drowning out the nonsensical background music the composer picked for this section, *why* is there music here, there ought to be", "wordWait": 80}
     ],
-    "postWait": 80
+    "postWait": 120
   },
   {
     "type": "white",
@@ -1036,7 +1062,7 @@
   },
   {
     "lines": [
-      {"text": "nothing. Right. Nothing. There ought to be nothing in this scene. Nothing but you and the path.", "postWait": 800},
+      {"text": "nothing. Right. Nothing. There ought to be nothing in this scene. Nothing but you and the path.", "postWait": 1800},
       {"type": "title", "text": "The walk"},
       {"text": "Imagine your feet on the forest path. Pick your left foot up, move it forward; as it touches the ground, the weight of your right leg begins to lift.", "wordWait": 250, "postWait": 800},
       {"text": "Push your right leg forward, far enough that your right foot naturally meets the ground, which is enough to lift your left leg again.", "wordWait": 200, "postWait": 700},
@@ -1053,7 +1079,7 @@
   {
     "lines": [
       {"type": "title", "text": "The walk"},
-      {"text": "Sorry, I probably didn't need to explain it to you."},
+      {"text": "Sorry, I probably didn't need to explain it to you. Or the animator; she's seen plenty of walk cycles before."},
       {"text": "Look at your actual legs. Your real ones. Move your head if you need to. Imagine them walking.", "postWait": 1500},
       {"text": "Imagine what your feet would sound like if you started walking", "wordWait": 250}
     ],
@@ -1068,8 +1094,15 @@
   },
   {
     "lines": [
-      {"text": "where you are right now. Think up a nice path through your space. How would you walk that path? Who or what do you need to avoid?", "postWait": 1250},
-      {"text": "Imagine walking as close to the wall as you can. What do your clothes sound like as they brush against everything? What would you knock over?", "postWait": 1250},
+      {"text": "where you are right now. If the nighttime path was also here, asphalt and trees rudely interrupting your architecture, what would your feet sound like?", "postWait": 1250},
+      {"text": "The sounds of the forest are here, too, but I imagine the acoustics have probably changed. Is everything closer? Or on the other side of the wall?"}
+    ],
+    "postWait": 1250
+  },
+  {
+    "lines": [
+      {"text": "Erase the forest path. Think up a nice path through your space instead. How would you walk that path? Who or what do you need to avoid?", "postWait": 1250},
+      {"text": "Imagine walking as close to the nearest wall as you can. What do your clothes sound like as they brush against everything? What would you knock over?", "postWait": 1250},
       {"text": "Imagine falling sideways partway through. Backwards. Where do you land? Would you catch yourself? Would you trip", "wordWait": 200}
     ],
     "postWait": 250
@@ -1083,15 +1116,15 @@
   {
     "lines": [
       {"text": "on the way down?"},
-      {"text": "Imagine a hundred people walking through the space you're in. Single file. Randomly. En masse.", "postWait": 700},
-      {"text": "Imagine them all talking, all at once. Whispering, speaking, laughing. Kids yelling.", "postWait": 800},
+      {"text": "Imagine a hundred people walking through the space you're in. Single file. Randomly. En masse.", "postWait": 1700},
+      {"text": "Imagine them all talking, all at once. Whispering, speaking, laughing. Kids yelling.", "postWait": 1500},
       {"text": "Can you imagine them louder? Loud enough that it almost hurts?"}
     ]
   },
   {
     "type": "white",
     "lines": [
-      {"type": "title", "text": "IMAGINE", "style": "5em", "preWait": 0, "postWait": 300}
+      {"type": "title", "text": "IMAGINE", "style": "5em", "preWait": 0, "postWait": 500}
     ]
   },
   {
@@ -1122,7 +1155,8 @@
       {"text": "Imagine the table falling down on the floor next to you, flipping, crashing.", "postWait": 800},
       {"text": "Imagine leaning down to set it up again.", "postWait": 800},
       {"text": "We didn't talk about the chair very much, but imagine that next to the table, too. We'll need it."}
-    ]
+    ],
+    "postWait": 2000
   },
   {
     "lines": [
