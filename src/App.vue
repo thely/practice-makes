@@ -8,12 +8,15 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import slidesBase from './data/lines.json';
 import SlideSingle from './components/SlideSingle.vue';
+import NoSleep from "nosleep.js";
 
-const slideIndex = ref(0);
+const startPos = 0;
+const slideIndex = ref(startPos);
 const autoplay = ref(true);
+let noSleep;
 
 const slides = computed(() => {
   slidesBase.forEach((slide, i) => {
@@ -66,6 +69,10 @@ const slides = computed(() => {
   return slidesBase;
 });
 
+onMounted(() => {
+  noSleep = new NoSleep();
+});
+
 const nextSlide = (e) => {
   console.log(e);
 
@@ -76,7 +83,16 @@ const nextSlide = (e) => {
     // we've clearly clicked a button
     slideIndex.value++;
   }
+
+  if (slideIndex.value == startPos + 1) {
+    noSleep.enable();
+  }
+
+  if (slideIndex.value >= slides.value.length) {
+    noSleep.disable();
+  }
 };
+
 </script>
 
 <style>
