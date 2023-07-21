@@ -40,3 +40,20 @@ a,
     padding: 0 2rem;
   } */
 }
+
+p, ul {
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: rgb(60, 60, 60);
+  border: 2px solid var(--vt-c-black-soft);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--vt-c-white-soft);
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-right: 0.5em;
+  padding: 0.3em 0.5em;
+  /* text-transform: uppercase; */
+}

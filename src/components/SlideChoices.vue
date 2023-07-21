@@ -19,15 +19,17 @@
           @complete="doneResult = 1"
         />
       </p>
-      <button v-if="doneResult" @click="toNext">Next</button>
+      <TestButton v-if="doneResult && showAction" @pressed="choiceTwoDoneAction = true"/>
+      <button v-if="doneResult && (choiceTwoWithAction)" @click="toNext">Next</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
 import { useFadeInList } from '../composables/fadeInList';
 import SlideLine from './SlideLine.vue';
+import TestButton from './TestButton.vue';
 
 const props = defineProps({
   id: {
@@ -55,16 +57,41 @@ const props = defineProps({
 const emits = defineEmits("complete");
 
 const chosen = ref(null);
+const showAction = ref(false);
 const doneResult = ref(0);
 const choices = computed(() => {
   return props.choices;
 });
 
+const choiceTwoWithAction = computed(() => {
+  if (showAction.value == true) {
+    return choiceTwoDoneAction.value;
+  } else {
+    return true;
+  }
+});
+
+const choiceTwoDoneAction = ref(false);
+
 const { listIndex } = useFadeInList(choices, props, () => { return; });
 
 onMounted(() => {
   console.log("mounted choices?");
-})
+});
+
+watch(chosen, (newV) => {
+  console.log("chose something?");
+  doneResult.value = 0;
+
+  if ("action" in choices.value[newV]) {
+    if (choices.value[newV].action == "showTestButton") {
+      showAction.value = true;
+    }
+  } else {
+    showAction.value = false;
+  }
+  // console.log(choices.value[newV]);
+});
 
 const toNext = () => {
   emits("complete");
@@ -80,6 +107,7 @@ const toNext = () => {
 .choice {
   display: block;
   opacity: 0;
+  position: relative;
 }
 
 .choice-visible {
@@ -90,5 +118,11 @@ const toNext = () => {
 .choice-auto {
   opacity: 1;
   transition: none;
+}
+
+.choice-block label  {
+  margin-left: 0.5em;
+  top: 0.1em;
+  position: absolute;
 }
 </style>
